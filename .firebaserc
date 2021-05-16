@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bdfirebase-e0cb5": {
+      "hosting": {
+        "uniajcMechanicalApp": [
+          "bdfirebase-e0cb5"
+        ]
+      }
+    }
+  }
+}
