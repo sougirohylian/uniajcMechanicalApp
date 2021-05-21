@@ -9,10 +9,51 @@
     </div>
 
     <!-- Login Form -->
-    <form>
+    <!-- <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario" [(ngModel)]="user" required="required">
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="Contraseña" [(ngModel)]="pass" required="required">
       <input type="submit" class="fadeIn fourth" value="Log In">
+    </form> -->
+
+
+    <form class="form-horizontal form-material mt-2" [formGroup]="form" novalidate (ngSubmit)="doLogin()">
+
+      <div class="form-group ">
+        <div class="col-sm-8 offset-sm-2">
+
+            <input type="email"
+                  class="form-control"
+                  placeholder="email"
+                  formControlName="email"
+                  [ngClass]="{
+                    'danger': form.controls['email'].invalid && form.controls['email'].touched,
+                    'success': form.controls['email'].valid
+                  }">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-8 offset-sm-2">
+            <input type="password"
+                  class="form-control"
+                  placeholder="contraseñaa"
+                  formControlName="password"
+              [ngClass]="{
+                'danger': form.controls['password'].invalid && form.controls['password'].touched,
+                'success': form.controls['password'].valid
+              }">
+        </div>
+      </div>
+
+      <div class="form-group text-center mb-2">
+        <div class="col-sm-12 p-b-20">
+          <button [disabled]="!form.valid"
+                class="btn btn-block btn-lg btn-primary btn-rounded"
+                type="submit">
+            Ingresar
+          </button>
+        </div>
+      </div>
     </form>
 
     <!-- Remind Passowrd -->
