@@ -6,7 +6,7 @@ import {AngularFirestore} from '@angular/fire/firestore';
 export class AutenticacionService {
 
   constructor(private firestore:AngularFirestore) { }
-  read_Student(){
+  read_Users(){
     return this.firestore.collection('usuarios').snapshotChanges();
   }
 }
