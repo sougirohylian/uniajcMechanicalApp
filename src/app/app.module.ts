@@ -12,6 +12,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {environment} from './../environments/environment';
 import { MapComponent } from './modules/geo-map/map/map.component';
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,10 @@ import { MapComponent } from './modules/geo-map/map/map.component';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDgg7NhEizi5mul48n_y2baYCxOg-Jp7OM'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

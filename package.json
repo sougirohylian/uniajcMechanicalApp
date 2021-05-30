@@ -11,22 +11,26 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.1.0",
     "@angular/animations": "~10.1.0",
     "@angular/common": "~10.1.0",
     "@angular/compiler": "~10.1.0",
     "@angular/core": "~10.1.0",
     "@angular/fire": "^6.1.4",
     "@angular/forms": "~10.1.0",
+    "@angular/google-maps": "^12.0.2",
     "@angular/localize": "~10.1.0",
     "@angular/platform-browser": "~10.1.0",
     "@angular/platform-browser-dynamic": "~10.1.0",
     "@angular/router": "~10.1.0",
     "@ng-bootstrap/ng-bootstrap": "^8.0.4",
+    "@ng-web-apis/geolocation": "^1.0.4",
+    "@types/googlemaps": "^3.43.3",
     "bootstrap": "^4.5.0",
+    "firebase": "^7.0 || ^8.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2",
-    "firebase": "^7.0 || ^8.0"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.0",
