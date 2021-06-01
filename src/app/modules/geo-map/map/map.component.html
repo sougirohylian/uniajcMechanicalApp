@@ -1,3 +1,58 @@
-<section>
 
+<section>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="13">
+    
+      <agm-marker *ngFor="let marker of tallers; let i=index" [latitude]="marker.latitud" [longitude]="marker.longitud"></agm-marker>
+  
+</agm-map>
+    
+  
+  <div class="container">
+    <form class="form-horizontal form-material mt-2" [formGroup]="form" novalidate (ngSubmit)="doSearch()">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-10">
+          <input type="text"
+          class="form-control"
+          placeholder="Buscar por Nombre"
+          formControlName="name"
+          [ngClass]="{
+            'danger': form.controls['name'].invalid && form.controls['name'].touched,
+            'success': form.controls['name'].valid
+          }">
+        </div>
+        <div class="col-md-2">
+          <button [disabled]="!form.valid"
+          class="btn btn-block btn-lg btn-primary btn-rounded"
+          type="submit">
+      Buscar
+    </button>
+        </div>
+                  
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <button class="btn btn-block btn-lg btn-primary btn-rounded">
+            <fa-icon [icon]="faCogs"></fa-icon>
+            Mecanicos
+          </button>
+          
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-block btn-lg btn-primary btn-rounded">
+            <fa-icon [icon]="faCogs"></fa-icon>
+            Montacargas
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-block btn-lg btn-primary btn-rounded">
+            <fa-icon [icon]="faShoppingBag"></fa-icon>
+            Repuestos
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
 </section>
