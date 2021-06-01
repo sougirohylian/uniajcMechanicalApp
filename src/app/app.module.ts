@@ -13,6 +13,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {environment} from './../environments/environment';
 import { MapComponent } from './modules/geo-map/map/map.component';
 import { AgmCoreModule } from '@agm/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { AgmCoreModule } from '@agm/core';
     AngularFireDatabaseModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDgg7NhEizi5mul48n_y2baYCxOg-Jp7OM'
-    })
+    }),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
