@@ -14,12 +14,20 @@ import {environment} from './../environments/environment';
 import { MapComponent } from './modules/geo-map/map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FichaComponent } from './ficha/ficha.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: 'ficha/:id', component: FichaComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MapComponent
+    MapComponent,
+    FichaComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDgg7NhEizi5mul48n_y2baYCxOg-Jp7OM'
     }),
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,58 +1,64 @@
 
 <section>
-  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="13">
-    
-      <agm-marker *ngFor="let marker of tallers; let i=index" [latitude]="marker.latitud" [longitude]="marker.longitud"></agm-marker>
-  
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="13" (mapClick)="mapClick($event)">
+
+      <agm-marker *ngFor="let marker of tallers; let i=index" [latitude]="marker.latitud" [longitude]="marker.longitud" (markerClick)=markerClick(iw)>
+        <agm-info-window #iw>
+               <h3>{{marker.nombre}}</h3>
+               <button class="btn btn-block btn-lg btn-primary btn-rounded" (click)="verFicha(marker)">Ver ficha</button>
+
+        </agm-info-window>
+      </agm-marker>
+
 </agm-map>
-    
-  
-  <div class="container">
-    <form class="form-horizontal form-material mt-2" [formGroup]="form" novalidate (ngSubmit)="doSearch()">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-10">
-          <input type="text"
-          class="form-control"
-          placeholder="Buscar por Nombre"
-          formControlName="name"
-          [ngClass]="{
-            'danger': form.controls['name'].invalid && form.controls['name'].touched,
-            'success': form.controls['name'].valid
-          }">
-        </div>
-        <div class="col-md-2">
-          <button [disabled]="!form.valid"
-          class="btn btn-block btn-lg btn-primary btn-rounded"
-          type="submit">
-      Buscar
-    </button>
-        </div>
-                  
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-4">
-          <button class="btn btn-block btn-lg btn-primary btn-rounded">
-            <fa-icon [icon]="faCogs"></fa-icon>
-            Mecanicos
-          </button>
-          
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-block btn-lg btn-primary btn-rounded">
-            <fa-icon [icon]="faCogs"></fa-icon>
-            Montacargas
-          </button>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-block btn-lg btn-primary btn-rounded">
-            <fa-icon [icon]="faShoppingBag"></fa-icon>
-            Repuestos
-          </button>
-        </div>
-      </div>
+
+
+  <div class="container  mt-4">
+  <div class="row">
+    <input type="text" class="form-control col-md-8" placeholder="Buscar por Nombre" [(ngModel)]="criterioNombre">
+    <div class="col-md-2 pb-2">
+      <button [disabled]="criterioNombre.length == 0"
+      class="btn btn-block btn-lg btn-primary btn-rounded" type="submit" (click)="buscar()">
+        Buscar
+      </button>
     </div>
-  </form>
+    <div class="col-md-2 pb-2">
+      <button
+      class="btn btn-block btn-lg btn-dark btn-rounded" (click)="limpiar()">
+        Limpiar
+      </button>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 p-1">
+      <button class="btn btn-block btn-lg btn-primary btn-rounded" (click)="mostrarSitios(1)">
+        <fa-icon [icon]="faCogs"></fa-icon>
+        Mecanicos
+      </button>
+
+    </div>
+    <div class="col-md-6 p-1">
+      <button class="btn btn-block btn-lg btn-warning btn-rounded" (click)="mostrarSitios(2)">
+        <fa-icon [icon]="faCogs"></fa-icon>
+        Montacargas
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 p-1">
+      <button class="btn btn-block btn-lg btn-success btn-rounded" (click)="mostrarSitios(3)">
+        <fa-icon [icon]="faShoppingBag"></fa-icon>
+        Repuestos
+      </button>
+    </div>
+    <div class="col-md-6 p-1">
+      <button class="btn btn-block btn-lg btn-danger btn-rounded">
+        <fa-icon [icon]="faShoppingBag"></fa-icon>
+        S.O.S.
+      </button>
+    </div>
+  </div>
   </div>
 </section>

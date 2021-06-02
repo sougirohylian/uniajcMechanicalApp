@@ -1,7 +1,10 @@
 section{
-  width: 100%;
+  width: 70%;
   height: 100%;
+  margin: 0 auto;
+  margin-top: 1%;
 }
 agm-map {
-  height: 75%;
+  height: 70%;
+
 }

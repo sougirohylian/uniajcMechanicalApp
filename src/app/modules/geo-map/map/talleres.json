@@ -1,0 +1,7 @@
+[
+  {id: 1, nombre: "Talleres de Mecánica Automotriz", longitud: -76.524839,latitud: 3.426034, tipo: 1},
+  {id: 2, nombre: "Motorwagen Taller", longitud: -76.535139,latitud: 3.412326, tipo: 2},
+  {id: 3, nombre: "Arautos Ltda", longitud: -76.512480,latitud: 3.428090, tipo: 3},
+  {id: 4, nombre: "Ejes y suspensiones JUAN CARLOS", longitud: -76.526899,latitud: 3.396047, tipo: 1},
+  {id: 5, nombre: "Taller Celis", longitud: -76.508532,latitud: 3.448653, tipo: 2}
+]
