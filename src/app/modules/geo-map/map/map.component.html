@@ -1,6 +1,6 @@
 
 <section>
-  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="13" (mapClick)="mapClick($event)">
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="13" (mapClick)="mapClick()">
 
       <agm-marker *ngFor="let marker of tallers; let i=index" [latitude]="marker.latitud" [longitude]="marker.longitud" (markerClick)=markerClick(iw)>
         <agm-info-window #iw>
@@ -54,7 +54,7 @@
       </button>
     </div>
     <div class="col-md-6 p-1">
-      <button class="btn btn-block btn-lg btn-danger btn-rounded">
+      <button class="btn btn-block btn-lg btn-danger btn-rounded" (click)="solicitarSos()">
         <fa-icon [icon]="faShoppingBag"></fa-icon>
         S.O.S.
       </button>

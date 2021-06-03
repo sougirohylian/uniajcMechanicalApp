@@ -121,4 +121,7 @@ export class MapComponent implements OnInit {
       }
       this.previousIW = infoWindow;
   }
+  solicitarSos(){
+    this.router.navigate(['/requestsos'])
+  }
 }

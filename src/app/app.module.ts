@@ -16,6 +16,7 @@ import { AgmCoreModule } from '@agm/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FichaComponent } from './ficha/ficha.component';
 import { RouterModule, Routes } from '@angular/router';
+import { RequestsosComponent } from './modules/geo-map/requestsos/requestsos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -27,7 +28,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     MapComponent,
-    FichaComponent
+    FichaComponent,
+    RequestsosComponent
   ],
   imports: [
     BrowserModule,
