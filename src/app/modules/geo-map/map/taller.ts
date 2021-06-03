@@ -5,4 +5,8 @@ export class Taller {
   latitud: number;
   tipo: number;
   urlImg: string;
+  telefono: string;
+  direccion: string;
+  servicio: string;
+  calificacion: string;
 }

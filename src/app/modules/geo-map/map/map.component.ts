@@ -19,15 +19,20 @@ export class MapComponent implements OnInit {
 
   public tallersIniciales:Array<Taller> = [
     {id: 1, nombre: "Talleres de Mecánica Automotriz", longitud: -76.524839,latitud: 3.426034, tipo: 1,
-    urlImg: "../../../../assets/imagenes/img/1.jpg"},
+    urlImg: "../../../../assets/imagenes/img/1.jpg",telefono:"31854554",direccion:"Calle 69 # 1-132",servicio:"Mecanica",
+    calificacion:"../../../../assets/imagenes/img/estrellas5.jpeg"},
     {id: 2, nombre: "Motorwagen Taller", longitud: -76.535139,latitud: 3.412326, tipo: 2,
-    urlImg: "../../../../assets/imagenes/img/2.jpg"},
+    urlImg: "../../../../assets/imagenes/img/2.jpg",telefono:"31654104",direccion:"Carrera 5norte # 69-52",servicio:"Mecanica",
+    calificacion:"../../../../assets/imagenes/img/estrellas3.jpeg"},
     {id: 3, nombre: "Arautos Ltda", longitud: -76.512480,latitud: 3.428090, tipo: 3,
-    urlImg: "../../../../assets/imagenes/img/3.jpg"},
+    urlImg: "../../../../assets/imagenes/img/3.jpg",telefono:"31759954",direccion:"Calle 15 # 10-25",servicio:"Montallantas",
+    calificacion:"../../../../assets/imagenes/img/estrellas5.jpeg"},
     {id: 4, nombre: "Ejes y suspensiones JUAN CARLOS", longitud: -76.526899,latitud: 3.396047, tipo: 1,
-    urlImg: "../../../../assets/imagenes/img/4.jpg"},
+    urlImg: "../../../../assets/imagenes/img/4.jpg",telefono:"31854554",direccion:"Carrera 3 # 62-35",servicio:"Montallantas",
+    calificacion:"../../../../assets/imagenes/img/estrellas4.jpeg"},
     {id: 5, nombre: "Taller Celis", longitud: -76.508532,latitud: 3.448653, tipo: 2,
-    urlImg: "../../../../assets/imagenes/img/5.png"},
+    urlImg: "../../../../assets/imagenes/img/5.png",telefono:"31854554",direccion:"Calle 62 # 4-10",servicio:"Repuestos",
+    calificacion:"../../../../assets/imagenes/img/estrellas3.jpeg"},
   ];
 
 

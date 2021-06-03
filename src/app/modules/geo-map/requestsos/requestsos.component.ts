@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// ES6 Modules or TypeScript
+import Swal from 'sweetalert2'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-requestsos',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestsosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
   lat : any;
   lng : any;
   mapType = 'satellite';
@@ -36,5 +39,7 @@ export class RequestsosComponent implements OnInit {
   }
   Solicitar(){
     this.solicitudes = [{id: 1, nombre: "Mecanica", solicitud: "Agenda para revisión", idTaller:1}];
+    Swal.fire('Solicitud enviada con éxito!')
+    this.router.navigate(['/map'])
   }
 }

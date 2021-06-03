@@ -28,10 +28,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@ng-bootstrap/ng-bootstrap": "^8.0.4",
     "@ng-web-apis/geolocation": "^1.0.4",
+    "@sweetalert2/ngx-sweetalert2": "^10.0.0",
     "@types/googlemaps": "^3.43.3",
     "bootstrap": "^4.5.0",
     "firebase": "^7.0 || ^8.0",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^11.0.16",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
