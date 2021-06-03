@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Taller } from '../modules/geo-map/map/taller';
 import { Router, ActivatedRoute } from '@angular/router';
-
+// ES6 Modules or TypeScript
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-ficha',
   templateUrl: './ficha.component.html',
@@ -28,7 +29,7 @@ export class FichaComponent implements OnInit {
   ];
 
   taller: Taller = null;
-
+  solicitudes:Array<object> = [];
   constructor(private activatedRoute: ActivatedRoute,
   private router: Router) { }
 
@@ -49,5 +50,9 @@ export class FichaComponent implements OnInit {
       }
     })
   }
-
+  Solicitar(){
+    this.solicitudes = [{id: 1, nombre: "Mecanica", solicitud: "Agenda para revisión", idTaller:1}];
+    Swal.fire('Solicitud enviada con éxito!')
+    this.router.navigate(['/map'])
+  }
 }
