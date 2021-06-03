@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { faCogs,faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { Taller } from './taller';
+import Swal from 'sweetalert2'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-map',
@@ -127,6 +128,6 @@ export class MapComponent implements OnInit {
       this.previousIW = infoWindow;
   }
   solicitarSos(){
-    this.router.navigate(['/requestsos'])
+    Swal.fire('Un servicio de emergencia lo contactará para atender su solicitud!');
   }
 }

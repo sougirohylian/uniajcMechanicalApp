@@ -1,8 +1,8 @@
 <section>
-  <div class="container">
-    <div class="row section">
-      <div class="card col-6">
-        <img class="card-img-top col-6" src="{{taller.urlImg}}" alt="Card image cap" style="margin: 0 auto;">
+  <div class="d-flex" style="height: 100%;">
+    <div class="row section d-flex" style="height: 100%;">
+      <div class="card col-6 my-image" style="background-image: url({{taller.urlImg}});">
+        <!-- <img class="card-img-top col-6" src="{{taller.urlImg}}" alt="Card image cap" style="margin: 0 auto;"> -->
       </div>
       <div class="card col-6">
         <div class="card-body">
@@ -14,11 +14,11 @@
           <p class="card-text">{{taller.telefono}}</p>
           <h5 class="card-title">Dirección</h5>
           <p class="card-text">{{taller.direccion}}</p>
-    
+
           <h3>Clasificación</h3>
           <img class="card-img-top col-6" src="{{taller.calificacion}}" alt="Card image cap" style="margin: 0 auto;">
           <h3>Comentarios</h3>
-    
+
           <div class="container">
                 <div class="row">
                     <div class="col-8">
@@ -37,16 +37,16 @@
                             </div>
                             <div class="post-description">
                                 <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
-    
+
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
-    
+
           <a href="/map" class="btn btn-primary m-2">Volver</a>
-          
+
           <button class="btn btn-success m-2" (click)="Solicitar()">Solicitar servicio</button>
         </div>
       </div>
