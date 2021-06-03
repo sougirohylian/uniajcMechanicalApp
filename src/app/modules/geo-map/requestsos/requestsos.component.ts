@@ -11,6 +11,7 @@ export class RequestsosComponent implements OnInit {
   lat : any;
   lng : any;
   mapType = 'satellite';
+  solicitudes:Array<object> = [];
   ngOnInit(): void {
     this.getPosition().then(pos=>
       {
@@ -32,5 +33,8 @@ export class RequestsosComponent implements OnInit {
         });
     });
 
+  }
+  Solicitar(){
+    this.solicitudes = [{id: 1, nombre: "Mecanica", solicitud: "Agenda para revisión", idTaller:1}];
   }
 }

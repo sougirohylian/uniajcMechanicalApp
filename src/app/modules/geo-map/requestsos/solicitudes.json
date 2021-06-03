@@ -1,0 +1,7 @@
+[
+  {id: 1, nombre: "Mecanica", solicitud: "Agenda para revisión", idTaller:1},
+  {id: 2, nombre: "Montallantas", solicitud: "Cambio de llanta", idTaller:2},
+  {id: 3, nombre: "Mecanica", solicitud: "Agenda para revisión", idTaller:1},
+  {id: 4, nombre: "Emergencia SOS", solicitud: "El vehiculo no arranca", idTaller:5},
+  {id: 5, nombre: "Emergencia SOS", solicitud: "Se apaga solo", idTaller:4}
+]
